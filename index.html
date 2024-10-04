@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a GG's Sports</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff9966, #ff5e62);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #4A90E2;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        section.presentation {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #fff;
+            color: #333;
+            border-radius: 20px;
+            margin: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        section.presentation h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff5e62;
+            text-transform: uppercase;
+        }
+
+        section.presentation p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .cta-button {
+            padding: 15px 40px;
+            background-color: #dc3cfc;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #ff9966;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #95ffec;
+            margin-top: 50px;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        /* Tabla mejorada */
+        #sportProducts {
+            width: 90%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        #sportProducts th, #sportProducts td {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            border-bottom: 1px solid #eee;
+            transition: all 0.2s ease;
+        }
+
+        #sportProducts th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #sportProducts tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        #sportProducts tr:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        #sportProducts td {
+            color: #333;
+        }
+
+        .out-of-stock {
+            color: #ff5e62;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .discount {
+            color: #4A90E2;
+            font-weight: bold;
+        }
+
+        .stock {
+            color: #4CAF50;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .product-image {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.1);
+        }
+
+        /* Botón de Enviar */
+        form {
+            width: 60%;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+
+        form h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #0018c5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0018c5;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    ¡Bienvenido a GG's Sports!
+</header>
+
+<section class="presentation">
+    <h1>Tu tienda de deportes de confianza</h1>
+    <p>Descubre los mejores productos deportivos para cada una de tus necesidades. En GG's Sports ofrecemos una amplia gama de artículos de calidad que te acompañarán en todas tus actividades deportivas.</p><img src="logo.PNG" alt="logo" class="product-image" width="300px">
+
+    <br><br>
+    <a href="#sportProducts" class="cta-button">Explora nuestros productos</a>
+</section>
+
+<h2>Catálogo de Productos</h2>
+
+
+<table id="sportProducts">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Descuento</th>
+            <th>Precio Final</th>
+            <th>Cantidad Disponible</th>
+            <th>Proveedor</th>
+            <th>Disponibilidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Pelota de fútbol<br>
+                <a href="https://www.adidas.mx/balones-futbol" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/81+9lnaT9AL._AC_SX569_.jpg" width="200">
+                </a>
+            </td>
+            <td>Fútbol</td>
+            <td>$30</td>
+            <td data-discount="10">10%</td>
+            <td class="discount"></td>
+            <td>50</td>
+            <td><a href="https://www.adidas.mx/balones-futbol" target="_blank">Adidas</a></td>
+            <td class="stock">En stock</td>
+        </tr>
+        <tr>
+            <td>
+                Raqueta de Tenis<br>
+                <a href="https://wilsonstore.mx/collections/raquetas?srsltid=AfmBOorogLiTBlQUIgmxhR-4MEMumCMOYfkXfmbYJZzx6gbe_KexsoCF" target="_blank">
+                    <img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00088776838435L.jpg?odnHeight=612&odnWidth=612&odnBg=FFFFFF.jpg" width="200">
+                </a>
+            </td>
+            <td>Tenis</td>
+            <td>$120</td>
+            <td data-discount="5">5%</td>
+            <td class="discount"></td>
+            <td>20</td>
+            <td><a href="https://wilsonstore.mx/collections/raquetas?srsltid=AfmBOorogLiTBlQUIgmxhR-4MEMumCMOYfkXfmbYJZzx6gbe_KexsoCF" target="_blank">Wilson</a></td>
+            <td class="stock">En stock</td>
+        </tr>
+        <tr>
+            <td>
+                Guantes de Boxeo<br>
+                <a href="https://everlast.com.mx/collections/boxing-gloves?srsltid=AfmBOoqDE_HrfJfF_YWO1ZPRq7u95-NwRvF-u9xVBe73uE-xdYEEXmfi" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/51pBffG6A4L._AC_SX679_.jpg" width="200">
+                </a>
+            </td>
+            <td>Boxeo</td>
+            <td>$45</td>
+            <td data-discount="0">-</td>
+            <td class="discount">$45</td>
+            <td>35</td>
+            <td><a href="https://everlast.com.mx/collections/boxing-gloves?srsltid=AfmBOoqDE_HrfJfF_YWO1ZPRq7u95-NwRvF-u9xVBe73uE-xdYEEXmfi" target="_blank">Everlast</a></td>
+            <td class="out-of-stock">En espera</td>
+        </tr>
+        <tr>
+            <td>
+                Bicicleta de Montaña<br>
+                <a href="https://www.werbikes.mx/bicicletas/bicicletas-por-tipo/montana/" target="_blank">
+                    <img src="https://m.media-amazon.com/images/I/716Yr5Iqo-L.__AC_SX300_SY300_QL70_ML2_.jpg" width="200">
+                </a>
+            </td>
+            <td>Ciclismo</td>
+            <td>$350</td>
+            <td data-discount="15">15%</td>
+            <td class="discount"></td>
+            <td>10</td>
+            <td><a href="https://www.werbikes.mx/bicicletas/bicicletas-por-tipo/montana/" target="_blank">WerBikes</a></td>
+            <td class="stock">En stock</td>
+        </tr>
+        <tr>
+            <td>
+                Tabla de Surf<br>
+                <a href="https://www.tablassurfshop.com/surf/tablas-surf.html?srsltid=AfmBOoob_beiZQwgRiXZSnx-gmzfgcyDPm5tk6DdIkMekWs1uggXIc9Z" target="_blank">
+                    <img src="https://chedrauimx.vtexassets.com/arquivos/ids/35924382-800-auto?v=638617956405470000&width=800&height=auto&aspect=true" width="200">
+                </a>
+            </td>
+            <td>Surf</td>
+            <td>$250</td>
+            <td data-discount="20">20%</td>
+            <td class="discount"></td>
+            <td>0</td>
+            <td><a href="https://www.tablassurfshop.com/surf/tablas-surf.html?srsltid=AfmBOoob_beiZQwgRiXZSnx-gmzfgcyDPm5tk6DdIkMekWs1uggXIc9Z" target="_blank">Tablas Surf Shop</a></td>
+            <td class="out-of-stock">Agotado</td>
+        </tr>
+        <tr>
+            <td>
+                Zapatillas de Running<br>
+                <a href="https://www.nike.com/mx/w/running-calzado-37v7jzy7ok" target="_blank">
+                    <img src="https://www.sport.es/labolsadelcorredor/wp-content/uploads/2022/10/319088057_830885034831807_3100388459411120041_n-1-640x448.jpg" width="200">
+                </a>
+            </td>
+            <td>Running</td>
+            <td>$80</td>
+            <td data-discount="10">10%</td>
+            <td class="discount"></td>
+            <td>100</td>
+            <td><a href="https://www.nike.com/mx/w/running-calzado-37v7jzy7ok" target="_blank">Nike</a></td>
+            <td class="stock">En stock</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>-- Regístrate aquí si deseas más información --</h2>
+<form action="registro.php" method="post">
+    <label for="nombre"><h3>Nombre:</h3></label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="correo"><h3>Correo:</h3></label>
+    <input type="email" id="correo" name="correo" required>
+
+    <h3>Fecha de nacimiento:</h3>
+    <input type="date" name="date" required>
+
+    <h3>Género:</h3>
+    <h3>Hombre</h3>
+    <input type="radio" name="genero" value="Hombre">Hombre
+    <h3>Mujer</h3>
+    <input type="radio" name="genero" value="Mujer" checked> Mujer
+
+    <input type="submit" value="Enviar">
+</form>
+
+<script>
+    // Función para calcular el precio con descuento y actualizar el DOM
+    document.addEventListener('DOMContentLoaded', function () {
+        const rows = document.querySelectorAll('#sportProducts tbody tr');
+        rows.forEach(row => {
+            const priceCell = row.cells[2];
+            const discountCell = row.cells[3];
+            const finalPriceCell = row.querySelector('.discount');
+
+            const price = parseFloat(priceCell.textContent.replace('$', ''));
+            const discount = parseFloat(discountCell.getAttribute('data-discount'));
+
+            if (discount > 0) {
+                const finalPrice = price - (price * discount / 100);
+                finalPriceCell.textContent = `$${finalPrice.toFixed(2)}`;
+            } else {
+                finalPriceCell.textContent = `$${price.toFixed(2)}`;
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
